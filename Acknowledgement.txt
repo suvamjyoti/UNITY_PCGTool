@@ -1,0 +1,4 @@
+Oskar stalwart
+sebstian league
+https://andersource.dev/2020/11/06/organic-grid.html
+https://github.com/OskarSigvardsson/unity-delaunay
