@@ -11,25 +11,29 @@ public class MetaDataModel
     //          |_______|__X
     //              botttom
 
+
+    //water = 0
+    //grass = 1
+    //Land = 2
+
     public GameEnums.TileObjectName name;
-    public bool left;
-    public bool right;
-    public bool top;
-    public bool bottom;
+    public int left;
+    public int right;
+    public int top;
+    public int bottom;
   //  public GameEnums.SelfTilling selfTilling;               //will the mesh connect to each other withoput rotation 
   //  public GameEnums.MiroredRotation mirroredRotation;      //will the mesh connect after some rotation
 
     private string mainAttachmentRule;                              //the tiles connection data will be stored in it
-                                                                //or eg. 1010 will become 10 in order LTRB - left, top, right, bottom
 
     private string quaterRotaAttachmentRule;                          //tile connection rule for 90degree rotation
     private string halfRotaAttachmentRule;                        //tile connection rulle for 180degree rotation
     private string threeFourthRotaAttachmentRule;                 //tile connection rule for 270degree rotation
 
-    private int _joiningEdge;
-    public int joiningEdge=>_joiningEdge;
-    private int _nonJoiningEdge;
-    public int nonJoiningEdge => _nonJoiningEdge;
+    //private int _joiningEdge;
+    //public int joiningEdge=>_joiningEdge;
+   // private int _nonJoiningEdge;
+   // public int nonJoiningEdge => _nonJoiningEdge;
 
     public void SetAttachmentValue() 
     {
@@ -43,7 +47,7 @@ public class MetaDataModel
         threeFourthRotaAttachmentRule = GetBoolToIntegerValue(top, right, bottom,left);
 
         //order in this case doesnot matter
-        SetJoiningEdgeVariables(left, top, right, bottom);
+       // SetJoiningEdgeVariables(left, top, right, bottom);
     }
 
     public System.Collections.Generic.List<string> GetRotationValueList()
@@ -78,19 +82,19 @@ public class MetaDataModel
         }
     }
 
-    public void SetJoiningEdgeVariables(bool val1, bool val2, bool val3, bool val4)
+/*    public void SetJoiningEdgeVariables(bool val1, bool val2, bool val3, bool val4)
     {
         _joiningEdge = (val1 ? 1 : 0 ) + (val2 ? 1 : 0 ) + (val3 ? 1 : 0) + (val4 ? 1 : 0);
         _nonJoiningEdge = 4 - _joiningEdge;
-    }
+    }*/
 
-    private string GetBoolToIntegerValue(bool val1,bool val2,bool val3,bool val4) 
+    private string GetBoolToIntegerValue(int val1,int val2,int val3,int val4) 
     {
         //now this is a binary value in string format i.e  for eg. say "10110"
-        string binaryString = string.Concat(val1?"1":"0", val2 ? "1" : "0", val3 ? "1" : "0", val4 ? "1" : "0");
+        string integerString = string.Concat(val1, val2, val3, val4);
 
         //now we need to convert it to integer
-        return binaryString;
+        return integerString;
     }
 
     //will return the edgevalue for a tileObject wghich is rotated

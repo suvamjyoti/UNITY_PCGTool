@@ -9,14 +9,14 @@ using static GameEnums;
 public class EdgeValue 
 {
     public string edgeString;
-    public int _noOfJoiningEdge;
+   // public int _noOfJoiningEdge;
     public int _noOfEmptyneighbour;
 
     public EdgeValue() 
     {
         edgeString = string.Empty;
         _noOfEmptyneighbour = 0;
-        _noOfJoiningEdge = 0;
+       // _noOfJoiningEdge = 0;
     }
 }
 
@@ -156,8 +156,8 @@ public class WFCRules : MonoBehaviour
             }
 
            WFCDebugLogger.logError(LogChannel, "No tile found setting it to empty plain");     
-           // //incase no tile is found set it to to empty plain
-           finalReturnTile.tile = GlobalConfigData.GetInstance().tileObjectDict[GameEnums.TileObjectName.EmptyPlain];
+           // //incase no tile is found set it to to TileSet_0
+           finalReturnTile.tile = GlobalConfigData.GetInstance().tileObjectDict[GameEnums.TileObjectName.TileSet_0];
         }
 
         return finalReturnTile;
@@ -256,13 +256,17 @@ public class WFCRules : MonoBehaviour
                 //in this case its no use to verify using edgeValue edge string
                 //as edge string would contain 2 for empty neighbours
 
-                //if no of joiningedge in domain unit is less then joiningedge in edgevalue
-                //then remove that edge
-                if (unit.domain[i].metaData.joiningEdge < edgeValue._noOfJoiningEdge)
+                //TODO:may cause error in rules
+                //cant use this logic Anymore
                 {
-                    RemovedTileObjectsNameList.Add(unit.domain[i].metaData.name);
-                    unit.domain.RemoveAt(i);
-                    continue;
+                    //if no of joiningedge in domain unit is less then joiningedge in edgevalue
+                    //then remove that edge
+                    /*                if (unit.domain[i].metaData.joiningEdge < edgeValue._noOfJoiningEdge)
+                                    {
+                                        RemovedTileObjectsNameList.Add(unit.domain[i].metaData.name);
+                                        unit.domain.RemoveAt(i);
+                                        continue;
+                                    }*/
                 }
 
 
@@ -313,7 +317,6 @@ public class WFCRules : MonoBehaviour
                 //we can rely upon our edge value string
                 //and use it to remove TileObject which are no longer relevent
 
-                //first convert the binary edgestring to integer value
                 string value = edgeValue.edgeString;
 
                 //total number of possible rotation
@@ -523,20 +526,20 @@ public class WFCRules : MonoBehaviour
             switch (edgeToCheck)
             {
                 case GameEnums.EdgeType.Left:
-                    edgeValue._noOfJoiningEdge += tileObject.metaData.left ? 1 : 0;
-                    edgeValue.edgeString += tileObject.metaData.left ? "1" : "0";
+                   // edgeValue._noOfJoiningEdge += tileObject.metaData.left ? 1 : 0;
+                    edgeValue.edgeString += tileObject.metaData.left;
                     break;
                 case GameEnums.EdgeType.Right:
-                    edgeValue._noOfJoiningEdge += tileObject.metaData.right ? 1 : 0;
-                    edgeValue.edgeString += tileObject.metaData.right ? "1" : "0";
+                   // edgeValue._noOfJoiningEdge += tileObject.metaData.right ? 1 : 0;
+                    edgeValue.edgeString += tileObject.metaData.right;
                     break;
                 case GameEnums.EdgeType.Top:
-                    edgeValue._noOfJoiningEdge += tileObject.metaData.top ? 1 : 0;
-                    edgeValue.edgeString += tileObject.metaData.top ? "1" : "0";
+                    //edgeValue._noOfJoiningEdge += tileObject.metaData.top ? 1 : 0;
+                    edgeValue.edgeString += tileObject.metaData.top;
                     break;
                 case GameEnums.EdgeType.Bottom:
-                    edgeValue._noOfJoiningEdge += tileObject.metaData.bottom ? 1 : 0;
-                    edgeValue.edgeString += tileObject.metaData.bottom ? "1" : "0";
+                   // edgeValue._noOfJoiningEdge += tileObject.metaData.bottom ? 1 : 0;
+                    edgeValue.edgeString += tileObject.metaData.bottom;
                     break;
 
             }

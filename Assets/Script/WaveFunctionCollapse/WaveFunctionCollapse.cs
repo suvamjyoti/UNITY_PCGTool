@@ -238,7 +238,7 @@ public class WaveFunctionCollapse : MonoBehaviour
 
                     //Draw the first random value tile
 
-                    randTile = GlobalConfigData.GetInstance().tileObjectDict[GameEnums.TileObjectName.EmptyPlain];
+                    randTile = GlobalConfigData.GetInstance().tileObjectDict[GameEnums.TileObjectName.TileSet_0];
 
 
                     if (i == length - 1 && j == breadth - 1)
@@ -295,7 +295,8 @@ public class WaveFunctionCollapse : MonoBehaviour
 
             if(name == GameEnums.TileObjectName.None)
             {
-                name = GameEnums.TileObjectName.TopPlain;
+                //TODO: coul be problemetic, check if necessary
+                name = GameEnums.TileObjectName.TileSet_0;
             }
 
             randTile = GlobalConfigData.GetInstance().tileObjectDict[name];
@@ -417,16 +418,17 @@ public class WaveFunctionCollapse : MonoBehaviour
         switch (rotation)
         {
             case GameEnums.Rotations.NoRotation:
+                Qrotation = Quaternion.Euler(90, 0, 0);
                 //do nothing
                 break;
             case GameEnums.Rotations.QuaterRotation:
-                Qrotation = Quaternion.Euler(0, 90, 0);
+                Qrotation = Quaternion.Euler(90, 0, 90);
                 break;
             case GameEnums.Rotations.HalfRotation:
-                Qrotation = Quaternion.Euler(0, 180, 0);
+                Qrotation = Quaternion.Euler(90, 0, 180);
                 break;
             case GameEnums.Rotations.ThreeFourthRotation:
-                Qrotation = Quaternion.Euler(0, 270, 0);
+                Qrotation = Quaternion.Euler(90, 0, 270);
                 break;
             case GameEnums.Rotations.Empty:
                 WFCDebugLogger.logError(LogChannel, "Empty roation value passed for generation");
