@@ -44,6 +44,9 @@ public class WFCRules : MonoBehaviour
 
     private List<GameEnums.neighbourType> neighbourTypeList;
 
+    private const char IgnoreChar = '#'; // this is a random value which we
+                                           // are setting for empty neighbour values
+
     private void Awake()
     {
         waveFunctionCollapse = GetComponent<WaveFunctionCollapse>();
@@ -96,7 +99,7 @@ public class WFCRules : MonoBehaviour
 
                         string attachmentRule = unit.domain[i].metaData.GetAttachmentValue(rotation);
 
-                        if (compareEdgeStrings(attachmentRule, edgeValue.edgeString, '2'))
+                        if (compareEdgeStrings(attachmentRule, edgeValue.edgeString))
                         {
                             ReturnTile returnTile = new ReturnTile(unit.domain[i], rotation);
                             possibleTiles.Add(returnTile);
@@ -140,9 +143,33 @@ public class WFCRules : MonoBehaviour
             }
         }
 
-        if (possibleTiles.Count > 0)
+        if (possibleTiles.Count == 1)
         {
-            finalReturnTile =  possibleTiles[UnityEngine.Random.Range(0,possibleTiles.Count)];
+            finalReturnTile = possibleTiles[0];
+        }
+        else if (possibleTiles.Count > 1)
+        {
+            //this will determine if we will use the _DrawProbability
+            int randValue = UnityEngine.Random.Range(0, 11);
+
+            if (randValue >= 5)
+            {
+                //there is a 50% chance that we will use probability
+
+                int Max = 0;
+                foreach (ReturnTile tile in possibleTiles)
+                {
+                    if (tile.tile.metaData.DrawProbability > Max)
+                    {
+                        Max = tile.tile.metaData.DrawProbability;
+                        finalReturnTile = tile;
+                    }
+                }
+            }
+            else
+            {
+                finalReturnTile = possibleTiles[UnityEngine.Random.Range(0, possibleTiles.Count)];
+            }
         }
         else
         {
@@ -182,7 +209,7 @@ public class WFCRules : MonoBehaviour
 
                 string attachmentRule = tile.metaData.GetAttachmentValue(rotation);
 
-                if (compareEdgeStrings(attachmentRule, edgeValue.edgeString, '2'))
+                if (compareEdgeStrings(attachmentRule, edgeValue.edgeString))
                 {
                     return rotation;
                 } 
@@ -291,7 +318,7 @@ public class WFCRules : MonoBehaviour
                     string attachmentRule = unit.domain[i].metaData.GetAttachmentValue(rotation);
 
                     //if not matching then remove
-                    if (! compareEdgeStrings(attachmentRule, edgeValue.edgeString, '2'))
+                    if (! compareEdgeStrings(attachmentRule, edgeValue.edgeString))
                     {  
                         count++;
                     }
@@ -351,7 +378,7 @@ public class WFCRules : MonoBehaviour
     private static EdgeValue SetEmptyValues(ref EdgeValue edgevalue)
     {
         edgevalue._noOfEmptyneighbour += 1;
-        edgevalue.edgeString += "2";
+        edgevalue.edgeString += IgnoreChar; //=# //setting for edge with empty neighbours
         return edgevalue;
     }
 
@@ -552,17 +579,17 @@ public class WFCRules : MonoBehaviour
 
 
 
-    private bool compareEdgeStrings(string attachmentRule, string edgeValue, char ignoreChar) 
+    private bool compareEdgeStrings(string attachmentRule, string edgeValue) 
     {
-        // we need to compare two string say "1101" and "1201" ;
-        //we can ignore the ignore char = "2" value but other value must match
+        // we need to compare two string say "1101" and "1#01" ;
+        //we can ignore the ignore char = "#" value but other value must match
 
         bool stringsMatch = true;
         int count = 0;
 
             for (int i = 0; i <= edgeValue.Length-1; i++)
             {
-                if (edgeValue[i] == ignoreChar)
+                if (edgeValue[i] == IgnoreChar)
                 {
                     count++;
                     continue; // Skip the comparison at the ignoreIndex
@@ -575,7 +602,7 @@ public class WFCRules : MonoBehaviour
                 }
             }
 
-            //in case all the number are 2
+            //in case all the number are #
             if(count == attachmentRule.Length)
             {
                 stringsMatch = true;

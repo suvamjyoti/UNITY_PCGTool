@@ -21,8 +21,11 @@ public class MetaDataModel
     public int top;
     public int right;
     public int bottom;
-  //  public GameEnums.SelfTilling selfTilling;               //will the mesh connect to each other withoput rotation 
-  //  public GameEnums.MiroredRotation mirroredRotation;      //will the mesh connect after some rotation
+
+    private int _DrawProbability = 0;
+    public int DrawProbability=> _DrawProbability;
+    //  public GameEnums.SelfTilling selfTilling;               //will the mesh connect to each other withoput rotation 
+    //  public GameEnums.MiroredRotation mirroredRotation;      //will the mesh connect after some rotation
 
     private string mainAttachmentRule;                              //the tiles connection data will be stored in it
 
@@ -46,8 +49,32 @@ public class MetaDataModel
         //TRBL after 270 rotation
         threeFourthRotaAttachmentRule = GetBoolToIntegerValue(top, right, bottom,left);
 
+        SetProbabilityOfTile();
         //order in this case doesnot matter
-       // SetJoiningEdgeVariables(left, top, right, bottom);
+        // SetJoiningEdgeVariables(left, top, right, bottom);
+    }
+
+    public void SetProbabilityOfTile()
+    {
+        int proba = 0;
+        if(left != 0)
+        {
+            proba += 1;
+        }
+        if(right !=0)
+        {
+            proba += 1;
+        }
+        if (top != 0)
+        {
+            proba += 1;
+        }
+        if (bottom != 0)
+        {
+            proba += 1;
+        }
+
+        _DrawProbability = proba;
     }
 
     public System.Collections.Generic.List<string> GetRotationValueList()
@@ -82,11 +109,6 @@ public class MetaDataModel
         }
     }
 
-/*    public void SetJoiningEdgeVariables(bool val1, bool val2, bool val3, bool val4)
-    {
-        _joiningEdge = (val1 ? 1 : 0 ) + (val2 ? 1 : 0 ) + (val3 ? 1 : 0) + (val4 ? 1 : 0);
-        _nonJoiningEdge = 4 - _joiningEdge;
-    }*/
 
     private string GetBoolToIntegerValue(int val1,int val2,int val3,int val4) 
     {

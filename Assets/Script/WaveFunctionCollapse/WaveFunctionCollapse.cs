@@ -259,6 +259,7 @@ public class WaveFunctionCollapse : MonoBehaviour
 
     public async Task CollapseALocation(int length,int breadth,TileObjectController tile)
     {
+        //in edit mode
         if(GlobalConfigData.GetInstance().currentToolMode == GameEnums.ToolMode.EditMode //in case of edit mode
             && !GlobalConfigData.GetInstance().isBorderTilesEnabled         //if no border selcted
             && GlobalConfigData.GetInstance().globalEvaluationIteration==0) //only want initialisation for first cyclr
@@ -302,6 +303,7 @@ public class WaveFunctionCollapse : MonoBehaviour
             randTile = GlobalConfigData.GetInstance().tileObjectDict[name];
             Rotations tileRotation = GameEnums.Rotations.NoRotation;
 
+            //for the first random tile in case no border
             await GenerationMethods(location.xAxis, location.zAxis, randTile, tileRotation);
         }
 
@@ -422,13 +424,13 @@ public class WaveFunctionCollapse : MonoBehaviour
                 //do nothing
                 break;
             case GameEnums.Rotations.QuaterRotation:
-                Qrotation = Quaternion.Euler(90, 0, 90);
+                Qrotation = Quaternion.Euler(90, 90, 0);
                 break;
             case GameEnums.Rotations.HalfRotation:
-                Qrotation = Quaternion.Euler(90, 0, 180);
+                Qrotation = Quaternion.Euler(90, 180, 0);
                 break;
             case GameEnums.Rotations.ThreeFourthRotation:
-                Qrotation = Quaternion.Euler(90, 0, 270);
+                Qrotation = Quaternion.Euler(90, 270, 0);
                 break;
             case GameEnums.Rotations.Empty:
                 WFCDebugLogger.logError(LogChannel, "Empty roation value passed for generation");
