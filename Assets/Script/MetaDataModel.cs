@@ -18,8 +18,8 @@ public class MetaDataModel
 
     public GameEnums.TileObjectName name;
     public int left;
-    public int right;
     public int top;
+    public int right;
     public int bottom;
   //  public GameEnums.SelfTilling selfTilling;               //will the mesh connect to each other withoput rotation 
   //  public GameEnums.MiroredRotation mirroredRotation;      //will the mesh connect after some rotation
