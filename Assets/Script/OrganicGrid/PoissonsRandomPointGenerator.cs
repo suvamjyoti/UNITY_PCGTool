@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoissonsDiskSampling : MonoBehaviour
+public class PoissonsRandomPointGenerator : MonoBehaviour
 {
-  
-    public static List<Vector2> GeneratePoint(float radius, Vector2 sampleRegionSize, int numSamplingBeforeRejection = 30)
+    public float radius = 1;
+    public Vector2 regionSize = Vector2.one;
+    public int rejectionSample = 30;
+    public float displayRadius = 1;
+    
+    public  List<Vector2> GeneratePoint()
     {
         float cellSize = radius/Mathf.Sqrt(2);
 
-        int[,] grid = new int[Mathf.CeilToInt(sampleRegionSize.x / cellSize), Mathf.CeilToInt(sampleRegionSize.y / cellSize)];
+        int[,] grid = new int[Mathf.CeilToInt(regionSize.x / cellSize), Mathf.CeilToInt(regionSize.y / cellSize)];
         List<Vector2> points = new List<Vector2>();
 
         List<Vector2> spawnPoints = new List<Vector2>();
 
-        spawnPoints.Add(sampleRegionSize / 2);
+        spawnPoints.Add(regionSize / 2);
 
         while(spawnPoints.Count>0)
         {
@@ -22,13 +26,13 @@ public class PoissonsDiskSampling : MonoBehaviour
             Vector2 spawnCenter = spawnPoints[spawnIndex];
 
             bool candidateAccepted = false;
-            for(int i=0;i<numSamplingBeforeRejection;i++)
+            for(int i=0;i<rejectionSample;i++)
             {
                 float angle = Random.value * Mathf.PI * 2;
                 Vector2 dir = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle));
                 Vector2 candidate = spawnCenter * dir * Random.Range(radius, 2 * radius);
 
-                if (isValid(candidate,sampleRegionSize,cellSize,radius,points,grid))
+                if (isValid(candidate,regionSize,cellSize,radius,points,grid))
                 {
                     candidateAccepted = true;
 

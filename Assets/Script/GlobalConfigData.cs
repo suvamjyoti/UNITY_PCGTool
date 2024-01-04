@@ -43,7 +43,11 @@ public  class GlobalConfigData : MonoBehaviour
     public bool isVisualisationOn { get; private set; }
     public int visualisationSpeed { get; private set;}
 
-   
+    public int waterProbability { get; private set; }
+    public int dirtProbability { get; private set; }
+    public int grassProbability { get; private set; }
+
+
     #endregion
 
     #region SINGELTON
@@ -101,6 +105,9 @@ public  class GlobalConfigData : MonoBehaviour
             isBorderTilesEnabled = uiController.V_BorderToggle.isOn;
             isVisualisationOn = uiController.V_VisualisationToggle.isOn;
             visualisationSpeed = (int) ( (uiController.V_VisualisationDelaySlider.value + 0.001) * 1000 );
+            waterProbability = (int)((uiController.V_WaterPriority.value)*10 + 1);
+            dirtProbability = (int)((uiController.V_DirtPriority.value)*10 + 1);
+            grassProbability = (int)((uiController.V_LandPriority.value)*10 + 1);
         }
         else
         {
@@ -108,8 +115,10 @@ public  class GlobalConfigData : MonoBehaviour
            mapLength = int.Parse(uiController.E_lengthFeild.text);
            mapBreadth = int.Parse(uiController.E_breadthFeild.text);
            isBorderTilesEnabled = uiController.E_BorderToggle.isOn;
-           isVisualisationOn = true;
-           visualisationSpeed =1;
+            waterProbability = (int)((uiController.V_WaterPriority.value)*10 + 1);
+            dirtProbability = (int)((uiController.V_DirtPriority.value)*10 + 1);
+            grassProbability = (int)((uiController.V_LandPriority.value)*10 + 1);
+            visualisationSpeed = 1;
         }
     }
 
@@ -185,7 +194,6 @@ public  class GlobalConfigData : MonoBehaviour
             mapBreadth = 7;
 
             visualisationSpeed = 1;
-            uiController.E_VisualisationDelaySlider.value = 0f;
         }
 
         

@@ -32,6 +32,9 @@ public class MainUIController : MonoBehaviour
 
     public Toggle V_VisualisationToggle;
     public Slider V_VisualisationDelaySlider;
+    public Slider V_WaterPriority;
+    public Slider V_LandPriority;
+    public Slider V_DirtPriority;
 
     public Button V_GenerateButton;
     public Button V_ResetButton;
@@ -51,8 +54,9 @@ public class MainUIController : MonoBehaviour
 
     public Toggle E_BorderToggle;
 
-    public Toggle E_VisualisationToggle;
-    public Slider E_VisualisationDelaySlider;
+    public Slider E_WaterPriority;
+    public Slider E_LandPriority;
+    public Slider E_DirtPriority;
 
     public Button E_StartButton;
     public Button E_GenerateButton;

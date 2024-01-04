@@ -16,6 +16,7 @@ public class MetaDataModel
     //grass = 1
     //Land = 2
 
+    public const string LogChannel = "MetaDataModel";
     public GameEnums.TileObjectName name;
     public int left;
     public int top;
@@ -56,25 +57,29 @@ public class MetaDataModel
 
     public void SetProbabilityOfTile()
     {
-        int proba = 0;
-        if(left != 0)
-        {
-            proba += 1;
-        }
-        if(right !=0)
-        {
-            proba += 1;
-        }
-        if (top != 0)
-        {
-            proba += 1;
-        }
-        if (bottom != 0)
-        {
-            proba += 1;
-        }
+        int proba = GetParameterProbabilityValue(left)  +
+                    GetParameterProbabilityValue(top)   +
+                    GetParameterProbabilityValue(right) +
+                    GetParameterProbabilityValue(bottom);
 
         _DrawProbability = proba;
+        WFCDebugLogger.log(LogChannel, name + ": Probability =   " + _DrawProbability);
+    }
+
+    private int GetParameterProbabilityValue(int edgeValue)
+    {
+        switch (edgeValue)
+        {
+            case 0: // Water
+                return GlobalConfigData.GetInstance().waterProbability;
+            case 1: // Grass
+                return GlobalConfigData.GetInstance().grassProbability;
+            case 2: // Dirt
+                return GlobalConfigData.GetInstance().dirtProbability;
+            default:
+                WFCDebugLogger.logError(LogChannel,"invalide edge Value");
+                return 0;
+        }
     }
 
     public System.Collections.Generic.List<string> GetRotationValueList()
