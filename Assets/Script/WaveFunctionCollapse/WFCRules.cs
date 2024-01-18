@@ -152,9 +152,9 @@ public class WFCRules : MonoBehaviour
             //this will determine if we will use the _DrawProbability
             int randValue = UnityEngine.Random.Range(0, 11);
 
-            if (randValue >= 2)
+            if (randValue > 6)
             {
-                //there is a 80% chance that we will use probability
+                //there is a 50% chance that we will use probability
 
                 int Max = 0;
                 foreach (ReturnTile tile in possibleTiles)

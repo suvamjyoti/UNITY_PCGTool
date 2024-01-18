@@ -25,8 +25,6 @@ public class MetaDataModel
 
     private int _DrawProbability = 0;
     public int DrawProbability=> _DrawProbability;
-    //  public GameEnums.SelfTilling selfTilling;               //will the mesh connect to each other withoput rotation 
-    //  public GameEnums.MiroredRotation mirroredRotation;      //will the mesh connect after some rotation
 
     private string mainAttachmentRule;                              //the tiles connection data will be stored in it
 
@@ -38,6 +36,18 @@ public class MetaDataModel
     //public int joiningEdge=>_joiningEdge;
    // private int _nonJoiningEdge;
    // public int nonJoiningEdge => _nonJoiningEdge;
+
+
+    public MetaDataModel(GameEnums.TileObjectName tileName,int right,int top,int left,int bottom)
+    {
+        name = tileName;
+        this.right = right;
+        this.top = top;
+        this.left = left;
+        this.bottom = bottom;
+
+        SetAttachmentValue();
+    }
 
     public void SetAttachmentValue() 
     {
@@ -62,8 +72,8 @@ public class MetaDataModel
                     GetParameterProbabilityValue(right) +
                     GetParameterProbabilityValue(bottom);
 
-        _DrawProbability = proba;
-        WFCDebugLogger.log(LogChannel, name + ": Probability =   " + _DrawProbability);
+       _DrawProbability = proba;
+       //WFCDebugLogger.log(LogChannel, name + ": Probability =   " + _DrawProbability);
     }
 
     private int GetParameterProbabilityValue(int edgeValue)

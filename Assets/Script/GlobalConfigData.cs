@@ -87,6 +87,10 @@ public  class GlobalConfigData : MonoBehaviour
         globalEvaluationIteration = 0;
         _tileObjectDict = new Dictionary<GameEnums.TileObjectName, TileObjectController>();
 
+
+        //??
+        //TODO: here read from Data file
+
         foreach (TileObjectController tile in _tileObjectList)
         {
             tile.metaData.SetAttachmentValue();
