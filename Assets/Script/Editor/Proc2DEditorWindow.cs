@@ -1,14 +1,24 @@
 using UnityEditor;
 using UnityEngine;
 
+public struct TileMetaData 
+{
+    public Texture Image;
+    public int right;
+    public int top;
+    public int left;
+    public int bottom;
+}
+
 
 public class Proc2DEditorWindow : EditorWindow
 {
-    private string myText = "Hello, Unity!";
-    private Texture[] selectedImages = new Texture[21];
+    //private string myText = "Hello, Unity!";
+
+    private TileMetaData[] selectedTilesList = new TileMetaData[21];
     private Vector2 scrollPosition = Vector2.zero;
 
-    [MenuItem("Window/My Custom Editor Window")]
+    [MenuItem("Window/Proc2DWindow")]
     public static void ShowWindow()
     {
         GetWindow<Proc2DEditorWindow>("Proc2DWindow");
@@ -19,9 +29,13 @@ public class Proc2DEditorWindow : EditorWindow
         GUILayout.Label("Image Selector", EditorStyles.boldLabel);
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
 
-        for (int i = 0; i < selectedImages.Length; i++)
+        for (int i = 0; i < selectedTilesList.Length; i++)
         {
-            selectedImages[i] = (Texture)EditorGUILayout.ObjectField("Image " + (i + 1), selectedImages[i], typeof(Texture), false);
+            selectedTilesList[i].Image = (Texture)EditorGUILayout.ObjectField("Image " + (i + 1), selectedTilesList[i].Image, typeof(Texture), false);
+            selectedTilesList[i].right = (int)EditorGUILayout.IntField("Right", selectedTilesList[i].right);
+            selectedTilesList[i].top = (int)EditorGUILayout.IntField("top", selectedTilesList[i].top);
+            selectedTilesList[i].left = (int)EditorGUILayout.IntField("top", selectedTilesList[i].left);
+            selectedTilesList[i].bottom = (int)EditorGUILayout.IntField("top", selectedTilesList[i].bottom);
         }
 
         if (GUILayout.Button("Load Images"))
@@ -32,13 +46,15 @@ public class Proc2DEditorWindow : EditorWindow
         EditorGUILayout.EndScrollView();
     }
 
+    //TODO: This will be responsible for creation of Scriptable object which will be used 
+    //to create levels
     private void LoadImages()
     {
-        for (int i = 0; i < selectedImages.Length; i++)
+        for (int i = 0; i < selectedTilesList.Length; i++)
         {
-            if (selectedImages[i] != null)
+            if (selectedTilesList[i] != null)
             {
-                Debug.Log("Loaded Image " + (i + 1) + ": " + selectedImages[i].name);
+                Debug.Log("Loaded Image " + (i + 1) + ": " + selectedTilesList[i].name);
                 // Perform any other actions with the loaded image, e.g., display in a scene.
             }
         }
