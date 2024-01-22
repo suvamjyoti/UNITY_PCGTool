@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEditor;
+using System.IO;
 
 public  class GlobalConfigData : MonoBehaviour 
 {
@@ -13,6 +15,10 @@ public  class GlobalConfigData : MonoBehaviour
 
 
     [SerializeField] private List<TileObjectController> _tileObjectList;
+
+    [SerializeField] private GameObject modelTile;
+    [SerializeField] private GameObject TileObjectHolder;
+
     public List<TileObjectController> tileObjectList => _tileObjectList;
 
     private Dictionary<GameEnums.TileObjectName, TileObjectController> _tileObjectDict;
@@ -77,7 +83,18 @@ public  class GlobalConfigData : MonoBehaviour
     private void Start()
     {
         currentToolMode = GameEnums.ToolMode.VanillaMode;
+        _tileObjectList = new List<TileObjectController>();
 
+        LoadDataModel();
+
+        _tileObjectDict = new Dictionary<GameEnums.TileObjectName, TileObjectController>();
+
+        foreach (TileObjectController tile in _tileObjectList)
+        {
+            tile.metaData.SetAttachmentValue();
+            _tileObjectDict.Add(tile.metaData.name, tile);
+        }
+        
     }
 
     private void InitialiseGlobalValues()
@@ -85,17 +102,13 @@ public  class GlobalConfigData : MonoBehaviour
         GetValuesFromUI();
 
         globalEvaluationIteration = 0;
-        _tileObjectDict = new Dictionary<GameEnums.TileObjectName, TileObjectController>();
+
 
 
         //??
         //TODO: here read from Data file
 
-        foreach (TileObjectController tile in _tileObjectList)
-        {
-            tile.metaData.SetAttachmentValue();
-            _tileObjectDict.Add(tile.metaData.name, tile);
-        }
+
 
         _levelMatrix = new int[mapLength, mapBreadth];
     }
@@ -201,6 +214,97 @@ public  class GlobalConfigData : MonoBehaviour
         }
 
         
+    }
+
+    private void ReadDataFile()
+    {
+
+    }
+
+    private void LoadDataModel()
+    {
+        // Open a file dialog to select the text file
+        string filePath = EditorUtility.OpenFilePanel("Load Tile Data", "", "txt");
+
+        if (string.IsNullOrEmpty(filePath))
+        {
+            Debug.LogWarning("File open operation cancelled.");
+            return;
+        }
+
+        // Read the file and load tile data
+        using (StreamReader reader = new StreamReader(filePath))
+        {
+
+            while (!reader.EndOfStream)
+            {
+                string tileData = reader.ReadLine();
+
+                // Split the tileData using the specified delimiter
+                string[] dataParts = tileData.Split('$');
+
+                int i = 0;
+
+                foreach (string data in dataParts)
+                {
+                    string[] actualData = data.Split('@');
+
+                    if (actualData.Length == 6) // Ensure all parts are present
+                    {
+                        GameEnums.TileObjectName tileName = (GameEnums.TileObjectName)Enum.Parse(typeof(GameEnums.TileObjectName), actualData[0]);
+                        string imagePath = actualData[1];
+                        int right = int.Parse(actualData[2]);
+                        int top = int.Parse(actualData[3]);
+                        int left = int.Parse(actualData[4]);
+                        int bottom = int.Parse(actualData[5]);
+
+                        // Load the texture based on the asset path
+                        Texture image = AssetDatabase.LoadAssetAtPath<Texture>(imagePath);
+
+                        //adding this tile data to dictionary
+                        AddTileData(tileName, image, right, top, left, bottom,i);
+
+                        i++;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Invalid data format: " + tileData);
+                    }
+
+                }
+
+
+            }
+        }
+
+        Debug.Log("Tile data loaded from: " + filePath);
+    }
+
+    private void AddTileData(GameEnums.TileObjectName tileName, Texture image, int right, int top, int left, int bottom,int index)
+    {
+        //create metadata for new Tile
+        MetaDataModel nMetaData = new MetaDataModel(tileName, right, top, left, bottom);
+
+        //create a new Gameobject and instantiate it
+        GameObject obj = Instantiate(modelTile);
+
+        obj.GetComponent<SpriteRenderer>().sprite = ConvertTextureToSprite((Texture2D)image);
+
+        obj.transform.parent = TileObjectHolder.transform;
+
+        obj.GetComponent<TileObjectController>().SetValues(nMetaData);
+
+        // Add the loaded data to your tileObjectcontroller list
+        tileObjectList.Add(obj.GetComponent<TileObjectController>());
+    }
+
+
+    Sprite ConvertTextureToSprite(Texture2D texture)
+    {
+        // Create a Sprite using the Texture2D
+        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+
+        return sprite;
     }
 
 }

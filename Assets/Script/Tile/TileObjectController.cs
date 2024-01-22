@@ -11,12 +11,18 @@ public class TileObjectController : MonoBehaviour
     public MetaDataModel metaData => _metaData; 
 
     private Transform objectTransform;
-
-    private void Awake()
+    
+    public TileObjectController(MetaDataModel nMetaData)
     {
-        objectTransform = this.transform;
-       // CalculateAttachmentRuleValue();
+        this._metaData = nMetaData; 
     }
+
+
+    public void SetValues(MetaDataModel nMetaData)
+    {
+        _metaData = nMetaData;
+    }
+
 
 
 
