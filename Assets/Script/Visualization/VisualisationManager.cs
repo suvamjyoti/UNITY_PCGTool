@@ -16,10 +16,10 @@ public class VisualisationManager : MonoBehaviour
     [SerializeField] private GameObject visualisationObject;
 
     private int     VisualisationSpeed;
-    private bool    _isVisualizationON;
+    private bool    _isVisualizationON = true;
     //private bool    CreateBorderPlain;
 
-    [SerializeField] private GameObject _visualisationParentObject;
+    [SerializeField] private GameObject _VisualisationGridHolderParent;
 
     private void Start()
     {
@@ -70,7 +70,7 @@ public class VisualisationManager : MonoBehaviour
                 VisualisationObject vObject = Utils.InstantiateAObject(visualisationObject.gameObject, new Vector3(i, 0, j), Quaternion.identity).GetComponent<VisualisationObject>();
                 _domainVisualisationGrid[i,j] = vObject;
                 vObject.SetLocation(i, j);
-                vObject.transform.SetParent(_visualisationParentObject.transform);
+                vObject.transform.SetParent(_VisualisationGridHolderParent.transform);
             }
         }
     }
@@ -105,18 +105,18 @@ public class VisualisationManager : MonoBehaviour
 
     public void HideVisualisationParentObject()
     {
-        _visualisationParentObject.SetActive(false);
+        _VisualisationGridHolderParent.SetActive(false);
     }
 
     private void ResetVisualisation()
     {
         //destroy all children
-        while (_visualisationParentObject.transform.childCount > 0)
+        while (_VisualisationGridHolderParent.transform.childCount > 0)
         {
-            DestroyImmediate(_visualisationParentObject.transform.GetChild(0).gameObject);
+            DestroyImmediate(_VisualisationGridHolderParent.transform.GetChild(0).gameObject);
         }
 
-        _visualisationParentObject.SetActive(true);
+        _VisualisationGridHolderParent.SetActive(true);
 
        //reset grid values
        _domainVisualisationGrid = null;

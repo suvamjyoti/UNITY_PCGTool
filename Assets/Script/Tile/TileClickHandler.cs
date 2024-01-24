@@ -21,7 +21,7 @@ public class TileClickHandler : MonoBehaviour
                 {
 
                     DomainObject domainObject = GetComponent<DomainObject>();
-                    VisualisationObject visObject = domainObject.visualisationObject;
+                    VisualisationObject visObject = domainObject.transform.parent.transform.parent.GetComponent<VisualisationObject>();                    
                     GameEnums.TileObjectName tileName = domainObject.tileName;
 
                     //spawn objects when click detected

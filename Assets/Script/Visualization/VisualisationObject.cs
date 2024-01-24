@@ -7,13 +7,16 @@ using UnityEngine;
 
 public class VisualisationObject : MonoBehaviour
 {
-    [SerializeField]private List<DomainObject> tileDomainList;
+    public List<DomainObject> tileDomainList { get; private set; }
 
     [SerializeField] private Material _activeMatrial;
     [SerializeField] private Material _evaluationMatrial;
     [SerializeField] private Material _CollapsedMatrial;
 
-    [SerializeField] private MeshRenderer objectRenderer; 
+    [SerializeField] private MeshRenderer objectRenderer;
+
+    [SerializeField] private GameObject _tileVisualeDomainGridParent;
+    public GameObject tileVisualeDomainGridParent => _tileVisualeDomainGridParent;
 
     public int tileXLocation { get; private set;}
     public int tileZLocation { get; private set; }
@@ -24,10 +27,11 @@ public class VisualisationObject : MonoBehaviour
 
     private void Awake()
     {
-        
+        tileDomainList = new List<DomainObject>();
     }
     private void Start()
     {
+       
         tileManager = TileManager.GetInstance();
     }
 
@@ -71,6 +75,11 @@ public class VisualisationObject : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void AddTileDomainObjectToList(DomainObject domainObject)
+    {
+        tileDomainList.Add(domainObject);
     }
 
 }

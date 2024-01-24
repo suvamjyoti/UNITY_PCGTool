@@ -19,6 +19,9 @@ public  class GlobalConfigData : MonoBehaviour
     [SerializeField] private GameObject modelTile;
     [SerializeField] private GameObject TileObjectHolder;
 
+    [SerializeField] private GameObject VisualisationTileModelObject;
+    [SerializeField] private GameObject VisualisationParentObject;
+
     public List<TileObjectController> tileObjectList => _tileObjectList;
 
     private Dictionary<GameEnums.TileObjectName, TileObjectController> _tileObjectDict;
@@ -87,6 +90,13 @@ public  class GlobalConfigData : MonoBehaviour
 
         LoadDataModel();
 
+        //also need to arrange visualisationTiles in a grid layout
+        VisualisationParentObject.GetComponent<VisualisationObject>().
+            tileVisualeDomainGridParent.GetComponent<GridLayoutSetupController>().AlignInGrid();
+
+        //apply these changes to prefab asset as well
+      //  ApplyChangesToPrefab(VisualisationParentObject.gameObject);
+
         _tileObjectDict = new Dictionary<GameEnums.TileObjectName, TileObjectController>();
 
         foreach (TileObjectController tile in _tileObjectList)
@@ -132,6 +142,7 @@ public  class GlobalConfigData : MonoBehaviour
            mapLength = int.Parse(uiController.E_lengthFeild.text);
            mapBreadth = int.Parse(uiController.E_breadthFeild.text);
            isBorderTilesEnabled = uiController.E_BorderToggle.isOn;
+            isVisualisationOn = true;
             waterProbability = (int)((uiController.V_WaterPriority.value)*10 + 1);
             dirtProbability = (int)((uiController.V_DirtPriority.value)*10 + 1);
             grassProbability = (int)((uiController.V_LandPriority.value)*10 + 1);
@@ -287,15 +298,17 @@ public  class GlobalConfigData : MonoBehaviour
 
         //create a new Gameobject and instantiate it
         GameObject obj = Instantiate(modelTile);
-
-        obj.GetComponent<SpriteRenderer>().sprite = ConvertTextureToSprite((Texture2D)image);
-
+        Sprite sprite = ConvertTextureToSprite((Texture2D)image);
+        obj.GetComponent<SpriteRenderer>().sprite = sprite;
         obj.transform.parent = TileObjectHolder.transform;
-
         obj.GetComponent<TileObjectController>().SetValues(nMetaData);
 
         // Add the loaded data to your tileObjectcontroller list
         tileObjectList.Add(obj.GetComponent<TileObjectController>());
+
+
+        //now add data for visualisation as well
+        AddVisualisationData(tileName, sprite);
     }
 
 
@@ -306,5 +319,47 @@ public  class GlobalConfigData : MonoBehaviour
 
         return sprite;
     }
+
+    private void AddVisualisationData(GameEnums.TileObjectName tileName,Sprite TileSprite)
+    {
+        //instatiate the visualisationModelObject
+        GameObject obj = Instantiate(VisualisationTileModelObject);
+
+        //Set tile sprite value and tile name
+        obj.GetComponent<SpriteRenderer>().sprite = TileSprite;
+        DomainObject domainObj = obj.GetComponent<DomainObject>();
+        domainObj.SetValue(tileName);
+
+        //add to domainList parent
+        obj.transform.parent = VisualisationParentObject.GetComponent<VisualisationObject>().tileVisualeDomainGridParent.transform;
+        //add this to the list inside visualisationParentObject
+        VisualisationParentObject.GetComponent<VisualisationObject>().AddTileDomainObjectToList(domainObj);
+    }
+
+    void ApplyChangesToPrefab(GameObject prefabInstance)
+    {
+        // Get the prefab asset
+        PrefabAssetType prefabAssetType = PrefabUtility.GetPrefabAssetType(prefabInstance);
+
+        if (prefabAssetType == PrefabAssetType.Regular || prefabAssetType == PrefabAssetType.Variant)
+        {
+            // Apply the changes to the prefab asset
+            PrefabUtility.SaveAsPrefabAsset(prefabInstance, PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(prefabInstance), out bool success);
+
+            if (success)
+            {
+                Debug.Log("Changes applied to the prefab asset.");
+            }
+            else
+            {
+                Debug.LogError("Failed to apply changes to the prefab asset.");
+            }
+        }
+        else
+        {
+            Debug.LogError("The provided GameObject is not a prefab or a prefab variant.");
+        }
+    }
+
 
 }

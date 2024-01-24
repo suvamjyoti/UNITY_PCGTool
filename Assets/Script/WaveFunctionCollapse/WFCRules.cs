@@ -150,7 +150,7 @@ public class WFCRules : MonoBehaviour
         else if (possibleTiles.Count > 1)
         {
             //this will determine if we will use the _DrawProbability
-            int randValue = UnityEngine.Random.Range(0, 11);
+        /*    int randValue = UnityEngine.Random.Range(0, 11);
 
             if (randValue > 6)
             {
@@ -167,9 +167,9 @@ public class WFCRules : MonoBehaviour
                 }
             }
             else
-            {
+            {*/
                 finalReturnTile = possibleTiles[UnityEngine.Random.Range(0, possibleTiles.Count)];
-            }
+            //}
         }
         else
         {
@@ -185,6 +185,11 @@ public class WFCRules : MonoBehaviour
            WFCDebugLogger.logError(LogChannel, "No tile found setting it to empty plain");     
            // //incase no tile is found set it to to TileSet_0
            finalReturnTile.tile = GlobalConfigData.GetInstance().tileObjectDict[GameEnums.TileObjectName.TileSet_0];
+        }
+
+        if(finalReturnTile.tile is null)
+        {
+            Debug.Log("asdasdasdadasd");
         }
 
         return finalReturnTile;

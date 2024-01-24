@@ -5,16 +5,22 @@ using UnityEngine;
 
 public class DomainObject:MonoBehaviour
 {
-    [SerializeField] public GameEnums.TileObjectName tileName;
+    public GameEnums.TileObjectName tileName { get; private set; }
+
     private SpriteRenderer correspondingSprite;
 
-    [SerializeField] public VisualisationObject visualisationObject;
+   // [SerializeField] public VisualisationObject visualisationObject;
 
     private void Awake()
     {
         correspondingSprite = GetComponent<SpriteRenderer>();
     }
 
+    public void SetValue(GameEnums.TileObjectName tileName)
+    {
+        this.tileName = tileName ;
+    }
+    
     public void VisualisationStatus(bool status)
     {
         correspondingSprite.enabled = status;

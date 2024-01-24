@@ -63,8 +63,15 @@ public class Proc2DEditorWindow : EditorWindow
             LoadDataModel();
         }
 
+        if (GUILayout.Button("CreateTileSetAndOtherAssets "))
+        {
+            //CreateAssets();
+        }
+
         EditorGUILayout.EndScrollView();
     }
+
+
 
     //TODO: This will be responsible for creation of Scriptable object which will be used 
     //to create levels
