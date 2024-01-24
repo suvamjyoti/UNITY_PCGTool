@@ -113,13 +113,6 @@ public  class GlobalConfigData : MonoBehaviour
 
         globalEvaluationIteration = 0;
 
-
-
-        //??
-        //TODO: here read from Data file
-
-
-
         _levelMatrix = new int[mapLength, mapBreadth];
     }
 
@@ -139,9 +132,9 @@ public  class GlobalConfigData : MonoBehaviour
         else
         {
 
-           mapLength = int.Parse(uiController.E_lengthFeild.text);
-           mapBreadth = int.Parse(uiController.E_breadthFeild.text);
-           isBorderTilesEnabled = uiController.E_BorderToggle.isOn;
+            mapLength = int.Parse(uiController.E_lengthFeild.text);
+            mapBreadth = int.Parse(uiController.E_breadthFeild.text);
+            isBorderTilesEnabled = uiController.E_BorderToggle.isOn;
             isVisualisationOn = true;
             waterProbability = (int)((uiController.V_WaterPriority.value)*10 + 1);
             dirtProbability = (int)((uiController.V_DirtPriority.value)*10 + 1);
@@ -225,11 +218,6 @@ public  class GlobalConfigData : MonoBehaviour
         }
 
         
-    }
-
-    private void ReadDataFile()
-    {
-
     }
 
     private void LoadDataModel()
