@@ -189,7 +189,7 @@ public class WFCRules : MonoBehaviour
 
         if(finalReturnTile.tile is null)
         {
-            Debug.Log("asdasdasdadasd");
+            WFCDebugLogger.logError(LogChannel,"Return tile is null");
         }
 
         return finalReturnTile;

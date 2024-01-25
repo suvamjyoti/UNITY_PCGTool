@@ -303,7 +303,7 @@ public  class GlobalConfigData : MonoBehaviour
     Sprite ConvertTextureToSprite(Texture2D texture)
     {
         // Create a Sprite using the Texture2D
-        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f,0.5f));
 
         return sprite;
     }
