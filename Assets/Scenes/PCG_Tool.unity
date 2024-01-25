@@ -8568,6 +8568,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 357589209}
     - target: {fileID: 1688748164268537555, guid: 7204c430f9959e549adaf654ebabb46b, type: 3}
+      propertyPath: visualisationObject
+      value: 
+      objectReference: {fileID: 1569545374}
+    - target: {fileID: 1688748164268537555, guid: 7204c430f9959e549adaf654ebabb46b, type: 3}
       propertyPath: _visualisationParentObject
       value: 
       objectReference: {fileID: 1160613758}

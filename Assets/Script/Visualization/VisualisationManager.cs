@@ -68,6 +68,7 @@ public class VisualisationManager : MonoBehaviour
             for (int j = 0; j < _domainBreadth; j++)
             {
                 VisualisationObject vObject = Utils.InstantiateAObject(visualisationObject.gameObject, new Vector3(i, 0, j), Quaternion.identity).GetComponent<VisualisationObject>();
+                vObject.gameObject.SetActive(true);
                 _domainVisualisationGrid[i,j] = vObject;
                 vObject.SetLocation(i, j);
                 vObject.transform.SetParent(_VisualisationGridHolderParent.transform);

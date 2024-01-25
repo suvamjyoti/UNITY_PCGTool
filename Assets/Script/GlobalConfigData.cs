@@ -94,8 +94,8 @@ public  class GlobalConfigData : MonoBehaviour
         VisualisationParentObject.GetComponent<VisualisationObject>().
             tileVisualeDomainGridParent.GetComponent<GridLayoutSetupController>().AlignInGrid();
 
-        //apply these changes to prefab asset as well
-      //  ApplyChangesToPrefab(VisualisationParentObject.gameObject);
+        //after making these changes we set it false
+        VisualisationParentObject.SetActive(false);
 
         _tileObjectDict = new Dictionary<GameEnums.TileObjectName, TileObjectController>();
 
