@@ -1,6 +1,6 @@
-<h1 aligh="center"> Proc2d Level Gen Tool for Unity </h1> 
+<h1 style="text-align: center;">Proc2d Level Gen Tool for Unity</h1>
 
-<h3 aligh="center"> A procedural level generation tool for Unity </h3>
+<h3 style="text-align: center;">A procedural level generation tool for Unity</h3>
 
 ---
 
