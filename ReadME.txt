@@ -1,16 +1,15 @@
-
 # Proc2d Level Gen Tool for Unity 
-## a procedural level generation tool for unity 
-___________________________________________________________________________________________________________
+## A procedural level generation tool for Unity 
 
+---
 
+### Some Known Errors:
 
-Some Known errors:
+1. Do not press **Reset** during generation, as this will mess up the algorithm, and it won't work then.
 
-1.do not press reset during generation, as this will mess up algo and it wont work then.
+2. The **Load** button does not work at launch. You need to save a level after opening it to load it; it works only before the application is closed.
 
-2.Load button doesnot work at launch, We have to save a level after opening it to load it,it works only before application is closed.
+3. After exiting Edit Mode, the camera stays in orthographic mode in Vanilla Mode as well.
 
-3.after exiting editMode camera stays in orthographic mode in vanilla mode as well.
+4. The **Generate** button does not work in Edit Mode if it is pressed before **Start**.
 
-4.generation button doesnot work in editMode if it is pressed before start.
