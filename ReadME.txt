@@ -1,5 +1,6 @@
-# Proc2d Level Gen Tool for Unity 
-## A procedural level generation tool for Unity 
+<h1 aligh="center"> Proc2d Level Gen Tool for Unity </h1> 
+
+<h3 aligh="center"> A procedural level generation tool for Unity </h3>
 
 ---
 
