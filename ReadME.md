@@ -43,7 +43,7 @@ a Unity tool for procedural level generation using the Wave Function Collapse al
 ## Demo
 
 ![Vanilla Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/VanillaMode.gif)
-![Editor Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/EditorMode.gif)
+![Editor Mode gif](https://github.com/suvamjyoti/UNITY_PCGTool/blob/main/RAW/EditorMode.gif)
 
 
 
