@@ -24,12 +24,13 @@ a Unity tool for procedural level generation using the Wave Function Collapse al
 - Visual GUI with Sprite Support
 - Rule Editing Capability
 - Vanilla Mode: In basic mode, users specify the desired level dimensions (length and breadth), and the tool automatically generates levels of the specified size.
-- User-Assisted Mode: This dynamic mode allows users to manually place specific tiles in desired locations. The tool generates the remaining areas while considering user-defined tile placements.
+- User-Assisted Mode: This dynamic mode allows users to place specific tiles in desired locations manually. The tool generates the remaining areas while considering user-defined tile placements.
 
 
 ## Screenshots
 
-![App Screenshot](https://paste.pics/1fe4b3e52317b93303e24a8522b1578f)
+![App Screenshot](https://raw.githubusercontent.com/suvamjyoti//main/RAW/UNITY_PCGTool/blob/main/RAW/Screenshot_%20(1).png)
+
 
 
 ## Demo
