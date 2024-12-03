@@ -44,11 +44,11 @@ a Unity tool for procedural level generation using the Wave Function Collapse al
 
 ## Demo
 
-###Vanilla Mode: 
+### Vanilla Mode: 
 In basic mode, users specify the desired level dimensions (length and breadth), and the tool automatically generates levels of the selected size.
 ![Vanilla Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/VanillaMode.gif)
 
-###User-Assisted Mode: 
+### User-Assisted Mode: 
 This dynamic mode allows users to manually place specific tiles in desired locations. The tool generates the remaining areas while considering user-defined tile placements.
 ![Editor Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/EditorMode.gif)
 
@@ -56,5 +56,12 @@ This dynamic mode allows users to manually place specific tiles in desired locat
 
 ## Lessons Learned
 
-What did you learn while building this project? What challenges did you face and how did you overcome them?
+- Custom Editor tool creation
+- Wave function collapse algorithm
+- Grammer-based procedural generation
+- Visualisation
+- Design patterns: Singleton
+- Better Project architecture
+- Async/Await function
+- MetaData creation
 
