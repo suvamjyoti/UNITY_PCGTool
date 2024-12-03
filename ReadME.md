@@ -28,23 +28,22 @@ a Unity tool for procedural level generation using the Wave Function Collapse al
 
 
 ## Screenshots
-
-[TileSet_1](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/SquareTileSet.png)
-[Level 1](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Type1_Screenshot(1).png)
-[Level 2](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Type1_Screenshot(2).png)
-[Level 3](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Type1_Screenshot(3).png)
+![TileSet_1](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/SquareTileSet.png)
+![Level 1](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Type1_Screenshot(1).png)
+![Level 2](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Type1_Screenshot(2).png)
+![Level 3](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Type1_Screenshot(3).png)
 
 ---
 
-[TileSet_2](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/OrganicTileSet.png)
-[Level 1](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Screenshot_(1).png)
-[Level 2](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Screenshot_(2).png)
-[Level 3](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Screenshot_(3).png)
+![TileSet_2](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/OrganicTileSet.png)
+![Level 1](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Screenshot_(1).png)
+![Level 2](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Screenshot_(2).png)
+![Level 3](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/Screenshot_(3).png)
 
 ## Demo
 
-[Vanilla Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/VanillaMode.gif)
-[Editor Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/EditorMode.gif)
+![Vanilla Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/VanillaMode.gif)
+![Editor Mode gif](https://raw.githubusercontent.com/suvamjyoti/UNITY_PCGTool/main/RAW/EditorMode.gif)
 
 
 
