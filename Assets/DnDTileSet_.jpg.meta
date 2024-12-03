@@ -1,0 +1,1907 @@
+fileFormatVersion: 2
+guid: f163b7268d9649f44a7b494e0131078c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DnDTileSet__0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71d938615a8dec44bac5f8844a92cc7
+      internalID: 1086092670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf3f81a7a1796141875a241179ecfdf
+      internalID: 454467849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbedcd092744d5a449519e4aa8449cc3
+      internalID: -1800047819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__3
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073516c3f2325364184f59d1e96f8d21
+      internalID: -266679692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__4
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0255ccacd9eb9d14ba1b125d5986e838
+      internalID: 137102367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__5
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1ce52347382bd45a2c2a6380d94f9c
+      internalID: 1207054241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7300b47183aa084294abf6d97f9dc5d
+      internalID: 539446017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__7
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 908
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30cee86747491d408bfe29839421ec7
+      internalID: -250246677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9e9796da972fd4c858f1effe92a9b7
+      internalID: 426431458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ad523f6964ba740a4ae47c8ac770fd
+      internalID: 1734960683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__10
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c329d09adfe1f4eb95e3f7a1eb9463
+      internalID: -799624615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__11
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72869fdc95f76ef45ada4de69f7e8b3a
+      internalID: -273837590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__12
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4235e05fa4e94d941bb107d95bcdb0d5
+      internalID: -325837442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__13
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7dcd60c6063ba749acc4a70ee942bd2
+      internalID: 405330375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__14
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f764d355f47763349b1de51edafd9225
+      internalID: -389940068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__15
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 808
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f988f2b153474d4abf4282e6b489ada
+      internalID: -2126328464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__16
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fe02a875279ca4283d16b4540f224b
+      internalID: -2020381817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__17
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bf1cb5b22f1274eb79b07c6f2392f2
+      internalID: -1745684705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2dca04a7fb37f4085546b9837e1d15
+      internalID: -1826227501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__19
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1179122afd21b428310baf0cd08ab3
+      internalID: 1847564516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__20
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b552defaae3b6d14b8a758c173ce25de
+      internalID: 1900207877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__21
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c34fc97c74124e47a90d7a1af23f3b0
+      internalID: -1918441112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__22
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593d7832e72d11b4b81b07cab4e67453
+      internalID: 2016249795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__23
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 708
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a00ec22409eae04ea6ac142f364b638
+      internalID: 1579762822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__24
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f321b4f4c609172459357ea995013ba1
+      internalID: -1083864105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59b280b642919746b194c395b37f1cb
+      internalID: -1750056754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__26
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ecb960aa4176e4b8d54bcc2c99141a
+      internalID: 255024863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__27
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b022595b6fbb4740a812de53ec93c51
+      internalID: -1671382659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__28
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3e1adade6ea8640b802aa5fdea3506
+      internalID: 1305139819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__29
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21701cc9366e5e9498f60b14bf180439
+      internalID: -680274889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__30
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade0cb43a94cb6c4ca7a9f3813c13900
+      internalID: -212614587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__31
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 608
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3b3249f51e939489f1ff8330005675
+      internalID: 1365899066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__32
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159a873b845ffb741923c39b7f657563
+      internalID: 225911351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__33
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b770c40f70594e04886de7511327cc56
+      internalID: -982706271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__34
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b40d61146f8d345912ed146f7af5f1
+      internalID: 223830339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__35
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8ad514239174e4e826187e2094258b
+      internalID: -9687932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__36
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f7b3c0edc0d184b9f5ffa0cddd5230
+      internalID: -682176123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__37
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1998380948684418c527e12dac2e29
+      internalID: 575475174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__38
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694eb7d5b4b8b174181ce62eab82aa68
+      internalID: -1241977302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__39
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 508
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf307d16acc5b648b09b540a4b58586
+      internalID: 1984286360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__40
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb85dc8c44e2e14cb175cf9f7618ed3
+      internalID: -33694219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__41
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f42a2a9789a8d44b80349054cf247af
+      internalID: 1738655471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__42
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12529727ef824c34e9b19925cb42250c
+      internalID: -729281879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__43
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3926ca492d827464a9fa83eb7e7bd129
+      internalID: -696028712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__44
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59849b6423def134faabd4ee7b278255
+      internalID: -1968563329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__45
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cdff976b1fd004c926381b48906205
+      internalID: 920593169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__46
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5321ddda569bc3a40b6c05a1d0d76496
+      internalID: 908478057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__47
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 408
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55f7a60bf076cb49a0c992121833650
+      internalID: -473858235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__48
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71fa4ed1132fbb4ba94cf20c370eb05
+      internalID: 1706409499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__49
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d825bee700dbe1246ad31a8b8e42d0ef
+      internalID: -685189249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__50
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6996eb67f1ad24f46bca6fc6000b42bc
+      internalID: 1449899263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__51
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699ebae5218aea249bfb779ecf152c09
+      internalID: -1874362083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__52
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90976c3d1eef58940a8c82399f2f8a59
+      internalID: -2074220627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__53
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49285d381da1ef04686a7bbbdf736215
+      internalID: 1033443094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__54
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5dcad7ad4b3a24eb6c7e4799a5933c
+      internalID: 83021643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__55
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 308
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc14691090570143b0c3bb181de6718
+      internalID: -7213425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__56
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a721e228ccf4f934f8fe2c0c2d80663d
+      internalID: 2129739783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__57
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881cff8d1edd95b488e897db5dee2280
+      internalID: 1655207948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__58
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec071799d23312a4db0fe8c0be9a9d1a
+      internalID: -2098292271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__59
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec91208225b4c840b793a05ea05ec71
+      internalID: -302075222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__60
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900a51600eeeeda40acecf19b8b5c079
+      internalID: -322215562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__61
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d0544ffa811ae4398198ce78247f52
+      internalID: 1315960080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__62
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daabbc6c413463c4a93ae85db0cd648d
+      internalID: 1436230348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__63
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 208
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f0260052f600241a4532d664217d36
+      internalID: 1412077067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__64
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73de215ccbbc3974bad9e33315f928ba
+      internalID: -1628488079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__65
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fe6c0bbed88204ca1f0070ed931ff5
+      internalID: -1680716689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__66
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07dafdc0d4d3e940ace6c9d57c80417
+      internalID: 1324368798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__67
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e84437db8fec6447acf3cc1a57f42f1
+      internalID: -1670034062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__68
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49402fc0527b7b54291d5e09bed2a7b8
+      internalID: -901133736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__69
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5ef80b1d18d2c4a992bc78153d76ab
+      internalID: -1852788568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__70
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ad350accde3a3468df5b7c2ffbe3c8
+      internalID: 1292797202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__71
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 108
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69c6097518b7c44a88c4e00d1700b5c
+      internalID: 1365280084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__72
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998a86783eecfef448f0d8ec63bc0289
+      internalID: -225941804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__73
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1934803dc11bf4c42a75a62dd4d06295
+      internalID: -1562913298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__74
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8590a37b59d0846a1cfcf979704d93
+      internalID: -2064348863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__75
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77abaafbd197e9429efabb6286ec4b1
+      internalID: 2039410252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__76
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b87af945c6f5d4479a01226e0136789
+      internalID: -357148064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__77
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182e426d3748e284cac82f1bfa8cd9ef
+      internalID: 910867181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__78
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d605e534031220043ad7f38b1b656232
+      internalID: 2013751999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DnDTileSet__79
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 8
+        width: 80
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b93b72fc883144da776d2fcda7cb8b
+      internalID: -219745511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 67c9a1da91d6e3047960341ff342062a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DnDTileSet__25: -1750056754
+      DnDTileSet__45: 920593169
+      DnDTileSet__66: 1324368798
+      DnDTileSet__15: -2126328464
+      DnDTileSet__10: -799624615
+      DnDTileSet__51: -1874362083
+      DnDTileSet__61: 1315960080
+      DnDTileSet__5: 1207054241
+      DnDTileSet__7: -250246677
+      DnDTileSet__16: -2020381817
+      DnDTileSet__50: 1449899263
+      DnDTileSet__68: -901133736
+      DnDTileSet__58: -2098292271
+      DnDTileSet__69: -1852788568
+      DnDTileSet__19: 1847564516
+      DnDTileSet__71: 1365280084
+      DnDTileSet__65: -1680716689
+      DnDTileSet__79: -219745511
+      DnDTileSet__14: -389940068
+      DnDTileSet__72: -225941804
+      DnDTileSet__29: -680274889
+      DnDTileSet__56: 2129739783
+      DnDTileSet__3: -266679692
+      DnDTileSet__17: -1745684705
+      DnDTileSet__33: -982706271
+      DnDTileSet__34: 223830339
+      DnDTileSet__70: 1292797202
+      DnDTileSet__57: 1655207948
+      DnDTileSet__42: -729281879
+      DnDTileSet__43: -696028712
+      DnDTileSet__76: -357148064
+      DnDTileSet__21: -1918441112
+      DnDTileSet__24: -1083864105
+      DnDTileSet__78: 2013751999
+      DnDTileSet__13: 405330375
+      DnDTileSet__53: 1033443094
+      DnDTileSet__73: -1562913298
+      DnDTileSet__74: -2064348863
+      DnDTileSet__11: -273837590
+      DnDTileSet__54: 83021643
+      DnDTileSet__60: -322215562
+      DnDTileSet__0: 1086092670
+      DnDTileSet__67: -1670034062
+      DnDTileSet__75: 2039410252
+      DnDTileSet__62: 1436230348
+      DnDTileSet__28: 1305139819
+      DnDTileSet__9: 1734960683
+      DnDTileSet__20: 1900207877
+      DnDTileSet__77: 910867181
+      DnDTileSet__4: 137102367
+      DnDTileSet__6: 539446017
+      DnDTileSet__44: -1968563329
+      DnDTileSet__8: 426431458
+      DnDTileSet__22: 2016249795
+      DnDTileSet__27: -1671382659
+      DnDTileSet__12: -325837442
+      DnDTileSet__38: -1241977302
+      DnDTileSet__41: 1738655471
+      DnDTileSet__18: -1826227501
+      DnDTileSet__36: -682176123
+      DnDTileSet__40: -33694219
+      DnDTileSet__48: 1706409499
+      DnDTileSet__31: 1365899066
+      DnDTileSet__39: 1984286360
+      DnDTileSet__59: -302075222
+      DnDTileSet__35: -9687932
+      DnDTileSet__23: 1579762822
+      DnDTileSet__30: -212614587
+      DnDTileSet__52: -2074220627
+      DnDTileSet__64: -1628488079
+      DnDTileSet__63: 1412077067
+      DnDTileSet__47: -473858235
+      DnDTileSet__55: -7213425
+      DnDTileSet__49: -685189249
+      DnDTileSet__46: 908478057
+      DnDTileSet__37: 575475174
+      DnDTileSet__1: 454467849
+      DnDTileSet__32: 225911351
+      DnDTileSet__26: 255024863
+      DnDTileSet__2: -1800047819
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

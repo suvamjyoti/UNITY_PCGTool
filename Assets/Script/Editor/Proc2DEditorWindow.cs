@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public struct TileMetaData 
 {
     public GameEnums.TileObjectName tileName;
-    public Texture image;
+    public Sprite image;
     public int right;
     public int top;
     public int left;
@@ -37,7 +37,7 @@ public class Proc2DEditorWindow : EditorWindow
         for (int i = 0; i < selectedTilesList.Length; i++)
         {
             selectedTilesList[i].tileName = (GameEnums.TileObjectName)EditorGUILayout.EnumPopup("Select Option:", selectedTilesList[i].tileName);
-            selectedTilesList[i].image = (Texture)EditorGUILayout.ObjectField("Tile " + (i), selectedTilesList[i].image, typeof(Texture), false);
+            selectedTilesList[i].image = (Sprite)EditorGUILayout.ObjectField("Tile " + (i), selectedTilesList[i].image, typeof(Sprite), false);
             selectedTilesList[i].right = (int)EditorGUILayout.IntField("Right", selectedTilesList[i].right);
             selectedTilesList[i].top = (int)EditorGUILayout.IntField("Top", selectedTilesList[i].top);
             selectedTilesList[i].left = (int)EditorGUILayout.IntField("Left", selectedTilesList[i].left);
@@ -168,7 +168,7 @@ public class Proc2DEditorWindow : EditorWindow
                         int bottom = int.Parse(actualData[5]);
 
                         // Load the texture based on the asset path
-                        Texture image = AssetDatabase.LoadAssetAtPath<Texture>(imagePath);
+                        Sprite image = AssetDatabase.LoadAssetAtPath<Sprite>(imagePath);
 
                         // Add the loaded data to your selectedTilesList
                         AddTileData(tileName,image, right, top, left, bottom,i);
@@ -204,7 +204,7 @@ public class Proc2DEditorWindow : EditorWindow
         }
     }
 
-    private void AddTileData(GameEnums.TileObjectName tileName,Texture image, int right, int top, int left, int bottom,int index)
+    private void AddTileData(GameEnums.TileObjectName tileName,Sprite image, int right, int top, int left, int bottom,int index)
     {
         // Add the loaded data to your selectedTilesList
 
@@ -227,7 +227,7 @@ public class Proc2DEditorWindow : EditorWindow
             if (selectedTilesList[i].image != null)
             {
                 selectedTilesList[i].tileName = (GameEnums.TileObjectName)EditorGUILayout.EnumPopup("Select Option:", selectedTilesList[i].tileName);
-                selectedTilesList[i].image = (Texture)EditorGUILayout.ObjectField("Tile " + (i + 1), selectedTilesList[i].image, typeof(Texture), false);
+                selectedTilesList[i].image = (Sprite)EditorGUILayout.ObjectField("Tile " + (i + 1), selectedTilesList[i].image, typeof(Sprite), false);
                 selectedTilesList[i].right = (int)EditorGUILayout.IntField("Right", selectedTilesList[i].right);
                 selectedTilesList[i].top = (int)EditorGUILayout.IntField("Top", selectedTilesList[i].top);
                 selectedTilesList[i].left = (int)EditorGUILayout.IntField("Left", selectedTilesList[i].left);
