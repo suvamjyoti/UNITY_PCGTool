@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Triangle
@@ -56,8 +57,8 @@ public class Triangle
         edge[0] = a;
         edge[1] = b;
     }
-
-    public void VisualizeEdges()
+    
+    public GameObject VisualizeEdges()
     {
         GameObject lineRendererObject = new GameObject("TriangleEdges");
         LineRenderer lineRenderer = lineRendererObject.AddComponent<LineRenderer>();
@@ -77,6 +78,8 @@ public class Triangle
         lineRenderer.material = new Material(Shader.Find("Sprites/Default")); // You can change the material as needed
         lineRenderer.startColor = Color.red; // Adjust line color as needed
         lineRenderer.endColor = Color.red;
+
+        return lineRendererObject;
     }
 
     public bool IsPointInside(Vector2 point)
@@ -90,7 +93,59 @@ public class Triangle
         // Check if the point is inside the triangle using barycentric coordinates
         return (w1 >= 0 && w2 >= 0 && w3 >= 0);
     }
+    
+    // Add these methods to your Triangle class:
+    // 
+    public bool IsPointInCircumcircle(Vector2 point)
+    {
+        // Calculate circumcircle center and radius
+        float ax = vertex1.x - point.x;
+        float ay = vertex1.y - point.y;
+        float bx = vertex2.x - point.x;
+        float by = vertex2.y - point.y;
+        float cx = vertex3.x - point.x;
+        float cy = vertex3.y - point.y;
+        
+        float det = (ax * ax + ay * ay) * (bx * cy - cx * by) -
+                    (bx * bx + by * by) * (ax * cy - cx * ay) +
+                    (cx * cx + cy * cy) * (ax * by - bx * ay);
+        
+        return det > 0;
+    }
 
+    public bool HasVertex(Vector2 v)
+    {
+        return vertex1 == v || vertex2 == v || vertex3 == v;
+    }
+
+    public bool HasEdge(Edge edge)
+    {
+        return (vertex1 == edge.p1 && vertex2 == edge.p2) ||
+               (vertex2 == edge.p1 && vertex3 == edge.p2) ||
+               (vertex3 == edge.p1 && vertex1 == edge.p2) ||
+               (vertex1 == edge.p2 && vertex2 == edge.p1) ||
+               (vertex2 == edge.p2 && vertex3 == edge.p1) ||
+               (vertex3 == edge.p2 && vertex1 == edge.p1);
+    }
+
+}
+
+public class Edge
+{
+    public Vector2 p1;
+    public Vector2 p2;
+    
+    public Edge(Vector2 point1, Vector2 point2)
+    {
+        p1 = point1;
+        p2 = point2;
+    }
+    
+    public bool Equals(Edge other)
+    {
+        return (p1 == other.p1 && p2 == other.p2) || 
+               (p1 == other.p2 && p2 == other.p1);
+    }
 }
 
 public class DelaunayTriangulation: MonoBehaviour
@@ -99,93 +154,132 @@ public class DelaunayTriangulation: MonoBehaviour
 
     [SerializeField] private  float MultiplierSuperTriangle = 1;
 
-    public List<Triangle> TriangleList { get; private set;}
+ public List<Triangle> TriangleList { get; private set; }
 
-    public List<Triangle> GenerateTriangleGrid(List<Vector2> vertexList)
+public List<Triangle> GenerateTriangleGrid(List<Vector2> vertexList)
+{
+    TriangleList = new List<Triangle>();
+    
+    // Create super triangle and add to list
+    TriangleList.Add(CreateSuperTriangle(vertexList));
+    
+    // Add each vertex one by one
+    for (int i = 0; i < vertexList.Count; i++)
     {
-
-        TriangleList = new List<Triangle>();
-
-        //first create a superTriangle circuscribing all the points
-        //and add to TriangleList
-        TriangleList.Add(CreateSuperTriangle(vertexList));
-
-        //now we need to iteratively add each vertex one by one
-        for (int i = 0; i < 10; i++)
+        Vector2 point = vertexList[i];
+        List<Triangle> badTriangles = new List<Triangle>();
+        
+        // Find all triangles whose circumcircle contains this point
+        foreach (Triangle triangle in TriangleList)
         {
-            Triangle tempTriangle = null;
-            //check in which triangle this point lies
+            if (triangle.IsPointInCircumcircle(point))
             {
-                foreach (Triangle triangle in TriangleList)
-                {
-                    if (triangle.IsPointInside(vertexList[i]))
-                    {
-                        tempTriangle = triangle;
-                    }
-                }
-            }
-
-            if(tempTriangle != null)
-            {
-                //connect the vertex of that triangle to this point
-                //and create three new triangles
-                {
-                    TriangleList.Add(new Triangle(tempTriangle.vertex1,tempTriangle.vertex2, vertexList[i]));
-                    TriangleList.Add(new Triangle(tempTriangle.vertex2, vertexList[i], tempTriangle.vertex3));
-                    TriangleList.Add(new Triangle(vertexList[i], tempTriangle.vertex3, tempTriangle.vertex1));
-
-                    //also remove the previous triangle which is no longer relevant
-                    //say {0,1,2,3,4} in list, we add 3 more total count 8,
-                    //8 - 4 = 4, which the index at which original triangle was 
-                    TriangleList.RemoveAt(TriangleList.Count - 4);
-                }
-
-                //now check for the circumscribe rule
-
-                //swap if rule fails
-            }
-            else
-            {
-                WFCDebugLogger.logError(LogChannel,"no proper triangle for the point found");
+                badTriangles.Add(triangle);
             }
         }
-
-
-        return TriangleList;
+        
+        // Find the boundary of the polygonal hole
+        List<Edge> polygon = new List<Edge>();
+        
+        foreach (Triangle triangle in badTriangles)
+        {
+            Edge edge1 = new Edge(triangle.vertex1, triangle.vertex2);
+            Edge edge2 = new Edge(triangle.vertex2, triangle.vertex3);
+            Edge edge3 = new Edge(triangle.vertex3, triangle.vertex1);
+            
+            // Add edge if it's not shared by another bad triangle
+            if (!IsEdgeShared(edge1, triangle, badTriangles))
+                polygon.Add(edge1);
+            if (!IsEdgeShared(edge2, triangle, badTriangles))
+                polygon.Add(edge2);
+            if (!IsEdgeShared(edge3, triangle, badTriangles))
+                polygon.Add(edge3);
+        }
+        
+        // Remove bad triangles
+        foreach (Triangle triangle in badTriangles)
+        {
+            TriangleList.Remove(triangle);
+        }
+        
+        // Create new triangles from the point to each edge of the polygon
+        foreach (Edge edge in polygon)
+        {
+            TriangleList.Add(new Triangle(edge.p1, edge.p2, point));
+        }
     }
 
-    Triangle CreateSuperTriangle(List<Vector2> points)
+    if (TriangleList.Count < 0)
+        return null;
+
+    if (TriangleList[0] is null)
+        return null;
+    
+    // Remove triangles that share vertices with super triangle
+    Vector2 superVertex1 = TriangleList[0].vertex1; // Store super triangle vertices before removal
+    TriangleList.RemoveAll(t => 
+        t.HasVertex(CreateSuperTriangle(vertexList).vertex1) ||
+        t.HasVertex(CreateSuperTriangle(vertexList).vertex2) ||
+        t.HasVertex(CreateSuperTriangle(vertexList).vertex3));
+    
+    VisualiseTriangleList();
+    return TriangleList;
+}
+
+private bool IsEdgeShared(Edge edge, Triangle currentTriangle, List<Triangle> triangles)
+{
+    foreach (Triangle triangle in triangles)
     {
-        
-        //Find minimum and maximum coordinates
-        var max_x = points.Max(p => p.x);
-        var max_y = points.Max(p => p.y);
-        
-        var min_x = points.Min(p => p.x);
-        var min_y = points.Min(p => p.y);
+        if (triangle == currentTriangle)
+            continue;
+            
+        if (triangle.HasEdge(edge))
+            return true;
+    }
+    return false;
+}
 
-        //Define vertices for the super triangle
-        //Extend the triangle beyond the bounding box
-        float a = max_x - min_x;
-        float b = max_y - min_y;
-        float dx = ((a > b) ? a : b) * MultiplierSuperTriangle;  // Extend length (adjust multiplier as needed)
-
-
-        Triangle super_triangle = new Triangle(
+Triangle CreateSuperTriangle(List<Vector2> points)
+{
+    if(points is null)
+        return null;
+    
+    if(points.Count < 3)
+        return null;
+    
+    
+    // Find minimum and maximum coordinates
+    var max_x = points.Max(p => p.x);
+    var max_y = points.Max(p => p.y);
+    var min_x = points.Min(p => p.x);
+    var min_y = points.Min(p => p.y);
+    
+    // Define vertices for the super triangle
+    float a = max_x - min_x;
+    float b = max_y - min_y;
+    float dx = ((a > b) ? a : b) * MultiplierSuperTriangle;
+    
+    Triangle super_triangle = new Triangle(
         new Vector2(min_x - dx, min_y - dx),
         new Vector2(max_x + dx, min_y - dx),
         new Vector2((min_x + max_x) / 2, max_y + dx * 2));
+    
+    return super_triangle;
+}
 
-        return super_triangle;
-    }
+List<GameObject> EdgeList = new List<GameObject>();      
 
-    private void VisualiseTriangleList()
+private void VisualiseTriangleList()
+{
+    foreach(Triangle triangle in TriangleList)
     {
-        foreach(Triangle triangle in TriangleList)
-        {
-            triangle.VisualizeEdges();
-        }
+        EdgeList.Add(triangle.VisualizeEdges());
     }
+}
+
+// Helper class for edges
+
+
 
     private int FibonaciSequence(int n)
     {

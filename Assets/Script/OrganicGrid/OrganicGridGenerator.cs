@@ -17,8 +17,12 @@ public class OrganicGridGenerator : MonoBehaviour
 
     private void Start()
     {
+        DrawOrganincGrid();
+    }
 
-
+    [ContextMenu("Generate")]
+    private void DrawOrganincGrid()
+    {
         poissonsVertexList = new List<Vector2>();
 
         poissonsVertexList = poissonsRandomPoint.GeneratePoint();

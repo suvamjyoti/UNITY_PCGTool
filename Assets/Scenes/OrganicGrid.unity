@@ -289,9 +289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a9ae218daef764a9f6da643df4e22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.5
-  regionSize: {x: 20, y: 20}
-  rejectionSample: 100
+  radius: 2
+  regionSize: {x: 50, y: 50}
+  rejectionSample: 200
   displayRadius: 0.1
 --- !u!1 &1692068339
 GameObject:
