@@ -104,10 +104,6 @@ public class DelaunayTriangulation: MonoBehaviour
     public List<Triangle> GenerateTriangleGrid(List<Vector2> vertexList)
     {
 
-        int n = FibonaciSequence(10);
-
-        Debug.Log(n);
-
         TriangleList = new List<Triangle>();
 
         //first create a superTriangle circuscribing all the points
@@ -160,11 +156,13 @@ public class DelaunayTriangulation: MonoBehaviour
 
     Triangle CreateSuperTriangle(List<Vector2> points)
     {
+        
         //Find minimum and maximum coordinates
-        float min_x = points.Min(p => p.x);
-        float max_x = points.Max(p => p.x);
-        float min_y = points.Min(p => p.y);
-        float max_y = points.Max(p => p.y);
+        var max_x = points.Max(p => p.x);
+        var max_y = points.Max(p => p.y);
+        
+        var min_x = points.Min(p => p.x);
+        var min_y = points.Min(p => p.y);
 
         //Define vertices for the super triangle
         //Extend the triangle beyond the bounding box
