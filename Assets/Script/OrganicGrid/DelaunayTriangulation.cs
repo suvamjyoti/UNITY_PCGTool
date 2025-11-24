@@ -172,6 +172,11 @@ public List<Triangle> GenerateTriangleGrid(List<Vector2> vertexList)
         // Find all triangles whose circumcircle contains this point
         foreach (Triangle triangle in TriangleList)
         {
+            if (triangle is null)
+            {
+                continue;
+            }
+            
             if (triangle.IsPointInCircumcircle(point))
             {
                 badTriangles.Add(triangle);
@@ -271,6 +276,15 @@ List<GameObject> EdgeList = new List<GameObject>();
 
 private void VisualiseTriangleList()
 {
+
+    if (EdgeList.Count > 0)
+    {
+        foreach (var edge in EdgeList)
+        {
+            Destroy(edge);
+        }
+    }
+    
     foreach(Triangle triangle in TriangleList)
     {
         EdgeList.Add(triangle.VisualizeEdges());
